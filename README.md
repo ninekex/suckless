@@ -1,5 +1,5 @@
 # suckless
-all my patched and configured versions of suckless's sofware
+all my patched and configured versions of [suckless's sofware](https://suckless.org/)
 
 the patches are included as files
 
