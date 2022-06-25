@@ -5,7 +5,7 @@ the patches are included as files
 
 needs font awesome and nkmono (my own font, ill upload it soon once i figure out how font licenses work)
 
-the status bar in dwm crashes when clicked on idk why but im guessing is bc i applied status2d incorrectly or smth.
+the status bar in dwm crashes when clicked on idk why but im guessing is bc i applied status2d or awesome bar incorrectly or smth.
 recommend runing dwm in a while loop in your `.xinitrc` so that it just restarts instead of crashing and killing your programs.
 
 example:
