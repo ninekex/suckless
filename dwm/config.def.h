@@ -49,10 +49,11 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,                  0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,                  1,            0,            0 }, /* monitor 1 is the second one and 2 is the primary */
 	{ "Spotify",  NULL,       NULL,                  1,            0,            1 },
-	{ "firefox",  "Toolkit",  "Picture-in-Picture",  1      ,      1,            0 },
+	{ "firefox",  "Toolkit",  "Picture-in-Picture",  1,            1,            0 },
 	{ "discord",  NULL,       NULL,                  1 << 3,       0,            0 },
 	{ "Blender",  NULL,       "Blender Preferences", 0,            1,            0 },
 	{ "tidal-hifi",  NULL,    NULL,                  1,            0,            1 },
+	{ "krita",    NULL,       NULL,                  1 << 8,       0,            0 },
 };
 
 /* layout(s) */
@@ -87,8 +88,8 @@ static const char *scrotcmd[]  = { "sc", NULL };
 static const char *scrotcmdS[] = { "scs", NULL };
 static const char *killdwm[]   = { "pkill", "dwm", NULL };
 
-static const char *upvol[]     = { "amixer", "-q", "sset", "Master", "1%+", NULL };
-static const char *downvol[]   = { "amixer", "-q", "sset", "Master", "1%-", NULL };
+static const char *upvol[]     = { "amixer", "-q", "sset", "Master", "2%+", NULL };
+static const char *downvol[]   = { "amixer", "-q", "sset", "Master", "2%-", NULL };
 static const char *mute[]      = { "amixer", "-q", "-D", "pulse", "sset", "Master", "toggle", NULL };
 static const char *play[]      = { "playerctl", "--ignore-player=firefox", "play-pause", NULL };
 static const char *stop[]      = { "playerctl", "--ignore-player=firefox", "stop", NULL };
@@ -126,6 +127,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = gappx } },
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY,                       XK_u,      hide,           {0} },
 	{ 0,                            XK_Print,  spawn,          { .v = scrotcmd  } },

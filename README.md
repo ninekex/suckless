@@ -33,7 +33,7 @@ done &
 # epiku status bar
 slstatus &
 
-# experimental for the gl renderer and box blur
+# sitelen pona (experimental for the glx renderer and box blur)
 picom --experimental-backends &
 
 # exec for better security or smth idk i dont understand this lol
