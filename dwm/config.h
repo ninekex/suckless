@@ -45,15 +45,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title                  tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,                  0,            1,           -1 },
-	{ "firefox",  NULL,       NULL,                  1,            0,            0 }, /* monitor 1 is the second one and 2 is the primary */
-	{ "Spotify",  NULL,       NULL,                  1,            0,            1 },
-	{ "firefox",  "Toolkit",  "Picture-in-Picture",  1,            1,            0 },
-	{ "discord",  NULL,       NULL,                  1 << 3,       0,            0 },
-	{ "Blender",  NULL,       "Blender Preferences", 0,            1,            0 },
-	{ "tidal-hifi",  NULL,    NULL,                  1,            0,            1 },
-	{ "krita",    NULL,       NULL,                  1 << 8,       0,            0 },
+    /* monitor 1 is the second one and 0 is the primary -1 is the current one i guess*/
+	/* class         instance    title                  tags mask     isfloating   monitor */
+	{ "Gimp",        NULL,       NULL,                  0,            1,           -1 },
+	{ "firefox",     NULL,       NULL,                  1,            0,            0 },
+	{ "Spotify",     NULL,       NULL,                  1,            0,            1 },
+	{ "firefox",     "Toolkit",  "Picture-in-Picture",  1,            1,            0 },
+	{ "discord",     NULL,       NULL,                  1 << 3,       0,            0 },
+	{ "Blender",     NULL,       "Blender Preferences", 0,            1,            0 },
+	{ "tidal-hifi",  NULL,       NULL,                  1,            0,            1 },
+	{ "krita",       NULL,       NULL,                  1 << 7,       0,            0 },
+	{ "Cairo-clock", NULL,       NULL,                  1 << 8,       1,            0 },
+	{ "MultiMC",     NULL,       NULL,                  1 << 1,       0,            0 },
 };
 
 /* layout(s) */
