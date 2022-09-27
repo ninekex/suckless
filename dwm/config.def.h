@@ -90,6 +90,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]  = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
 static const char *termcmd[]   = { "st", NULL };
 static const char *filecmd[]   = { "nautilus", NULL };
+static const char *kritacmd[]  = { "krita", NULL };
+static const char *ffcmd[]     = { "firefox", NULL };
 static const char *scrotcmd[]  = { "sc", NULL };
 static const char *scrotcmdS[] = { "scs", NULL };
 static const char *killdwm[]   = { "pkill", "dwm", NULL };
@@ -107,7 +109,9 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_y,      spawn,          {.v = filecmd } },
+	{ MODKEY|ShiftMask,             XK_y,      spawn,          {.v = filecmd } },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = kritacmd } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = ffcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
