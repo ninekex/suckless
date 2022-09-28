@@ -51,8 +51,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-dwm
-st
-slstatus
-dmenu
+dwm/dwm
+st/st
+slstatus/slstatus
+dmenu/dmenu
 stest
