@@ -51,10 +51,13 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 	mkdir -p $(DESTDIR)$(APPPREFIX)
 	cp -f st.desktop $(DESTDIR)$(APPPREFIX)
+	mkdir -p $(DESTDIR)$(ICONPREFIX)
+	[ -f $(ICONNAME) ] && cp -f $(ICONNAME) $(DESTDIR)$(ICONPREFIX) || :
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(APPPREFIX)/st.desktop
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
+	rm -f $(DESTDIR)$(ICONPREFIX)/$(ICONNAME)
 
 .PHONY: all options clean dist install uninstall
