@@ -33,7 +33,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"mpv", "--no-video", "--volume=70", "/home/ninekex/sfx/windows_xp_startup.mp3", NULL,
+	"startup", NULL,
 	NULL /* terminate */
 };
 
